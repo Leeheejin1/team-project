@@ -1,0 +1,44 @@
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!DOCTYPE>
+<html>
+<head>
+<style>
+    body{
+        background-color:#FBF5EF;
+    }
+    h1{
+        font-family:'Fantasy';
+        color:#170B3B;
+        text-align:center;
+    }
+    form{
+        position:relative;
+        left:400px;
+        bottom:-50px;
+    }
+    #sub{
+        position:relative;
+        left:250px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <h1>WordCountSite</h1>
+  <form action="{% url 'result' %}">   
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br></p>
+    <input type="submit" value="count" id="sub">
+</form>
+</div>
+<p>이곳에 세고 싶은 글자를 입력해주세요<br>입력을 완료한 후 제출 버튼을 누르고 밑에 about을 클릭하면 글자를 세주는 페이지로 이동합니다.</p>
+<a href="{% url 'about' %}">about</a>
